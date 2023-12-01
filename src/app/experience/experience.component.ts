@@ -21,7 +21,7 @@ export class ExperienceComponent {
         'Conceptualizing data that is crucial for automation',
         'Run performance tests'
       ],
-      logo: 'assets/webflow-logo.png' // Replace with actual logo path
+      logo: './assets/SSC_icon.png' // Replace with actual logo path
     },
     {
       role: 'Software Developer Intern',
@@ -37,7 +37,7 @@ export class ExperienceComponent {
         'Reduced development time by 30% through the development',
         'Implemented reusable components'
       ],
-      logo: 'src/app/images/webclip.png' // Replace with actual logo path
+      logo: './assets/RBC_icon.png' // Replace with actual logo path
     }
     // ... Add more experiences as needed
   ];

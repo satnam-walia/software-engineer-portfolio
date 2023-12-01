@@ -21,9 +21,9 @@
 
 .company-logo {
   flex-shrink: 0; /* Prevent the logo from shrinking */
-  width: 60px; /* Fixed width for the logo */
-  height: 60px; /* Fixed height for the logo */
-  border-radius: 50%; /* Makes the image circular */
+  width: 80px; /* Fixed width for the logo */
+  height: 80px; /* Fixed height for the logo */
+  /* border-radius: 50%; Makes the image circular */
   margin-right: 20px; /* Space between the logo and the details */
 }
 

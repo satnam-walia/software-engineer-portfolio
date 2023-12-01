@@ -29,17 +29,17 @@ export class ProjectsGridComponent {
   projectYears: number[] = [2024, 2023, 2022];
   activeDropdown: number | null = null;
 
-  projects: { [year: number]: Array<{ title: string; imageUrl: string; link: string; }> } = {
+  projects: { [year: number]: Array<{ title: string; category: string; imageUrl: string; link: string; }> } = {
     2024: [
-      { title: 'Space Explorer VR', imageUrl: 'src/assets/big_data.png', link: 'https://example.com/projects/space-explorer-vr' }
+      { title: 'Space Explorer VR', category: 'Squad Mood Metric', imageUrl: 'src/assets/big_data.png', link: 'https://example.com/projects/space-explorer-vr' }
     ],
     2023: [
-      { title: 'Architecture tactics with bus routes', imageUrl: '/assets/images/ocean-cleanup-bot.jpg', link: 'https://example.com/projects/ocean-cleanup-bot' },
-      { title: 'K-means with MapReduce and Publish/Subscribe', imageUrl: '/assets/images/ocean-cleanup-bot.jpg', link: 'https://example.com/projects/ocean-cleanup-bot' },
+      { title: 'Architecture tactics with bus routes', category: 'System Design', imageUrl: './assets/stm.png', link: 'https://example.com/projects/ocean-cleanup-bot' },
+      { title: 'K-means with MapReduce and Publish/Subscribe', category: 'Big Data', imageUrl: './assets/big_data.png', link: 'https://example.com/projects/ocean-cleanup-bot' },
     ],
     2022: [
-      { title: 'Jira Metric Tool', imageUrl: '/assets/images/smart-agriculture-ai.jpg', link: 'https://example.com/projects/smart-agriculture-ai' },
-      { title: 'Squad Mood Metric', imageUrl: '/assets/images/smart-agriculture-ai.jpg', link: 'https://example.com/projects/smart-agriculture-ai' },
+      { title: 'Jira Metric Tool', category: 'API Programming', imageUrl: './assets/jira_metric_tool.png', link: 'https://example.com/projects/smart-agriculture-ai' },
+      { title: 'Squad Mood Metric',  category: 'Data Integration', imageUrl: './assets/squad_mood_metric.png', link: 'https://example.com/projects/smart-agriculture-ai' },
     ]
   };
 

@@ -15,7 +15,7 @@
 
 .dropbtn {
   /* background-color: #4CAF50; */
-  color: white;
+  color: black;
   padding: 10px 20px;
   font-size: 1rem;
   border: none;
@@ -32,10 +32,10 @@
 }
 
 .dropdown-content {
-  background-color: #f9f9f9;
+  background-color: white; /* Lighter shade for background */
   overflow: hidden;
   width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Removed box-shadow property */
   border-radius: 0.3rem;
   margin-top: 0.5rem;
 }
@@ -52,33 +52,42 @@
   background-color: #ddd;
 }
 
+.project-item img {
+  height: 200px; /* Fixed height for all images */
+  width: 100%; 
+  object-fit: cover; /* Adjust as per your preference */
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 1fr; /* Adjust rows to fill available space */
   gap: 1rem;
 }
 
 .project-item {
-  border: 1px solid #ddd;
-  border-radius: 0.3rem;
-  overflow: hidden;
-  max-width: 300px; /* Maximum width for project items */
-  margin: 0 auto; /* Center project items within the grid */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 350px; /* Adjust based on your content */
 }
 
-.project-item img {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Remove any extra space below the image */
+/* Optional: Add media queries for responsiveness */
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
 }
 
-.project-item a {
-  text-decoration: none;
-  color: black; /* Title color */
+.project-item .project-description {
+  font-size: 1rem; /* Adjust to your preference */
+  color: #333; /* Any color you prefer for the text */
+  margin-top: 0.5rem; /* Space between image and description */
 }
 
 .project-title {
-  text-align: center;
-  padding: 0.5rem;
-  font-size: 1.2rem; /* Title font size */
+  font-size: 1.2rem; /* Larger font size for titles */
+  font-weight: bold; /* Makes the title bold */
+  margin-top: 1rem; /* Space between image and title */
 }
