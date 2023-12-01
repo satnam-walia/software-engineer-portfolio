@@ -1,0 +1,13 @@
+<div class="experience-container">
+  <div *ngFor="let experience of experiences" class="experience-entry">
+    <img [src]="experience.logo" alt="{{ experience.company }} logo" class="company-logo">
+    <div class="experience-details">
+      <div class="role-title">{{ experience.role }}</div>
+      <div><span class="experience-company">{{ experience.company }}</span> | <span class="experience-location">{{ experience.location }}</span></div>
+      <div class="experience-meta">{{ experience.duration }}</div>
+      <ul class="experience-description">
+        <li *ngFor="let item of experience.description">{{ item }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

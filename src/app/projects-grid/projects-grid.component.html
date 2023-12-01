@@ -1,0 +1,15 @@
+<section class="projects-dropdowns">
+  <div *ngFor="let year of projectYears" class="dropdown">
+    <button class="dropbtn" (click)="toggleDropdown(year)">Projects {{ year }}</button>
+    <div *ngIf="activeDropdown === year" class="dropdown-content">
+      <div class="projects-grid">
+        <div *ngFor="let project of projects[year]" class="project-item">
+          <a [href]="project.link" target="_blank">
+            <img [src]="project.imageUrl" alt="{{ project.title }}">
+            <h4 class="project-title">{{ project.title }}</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,84 @@
+.projects-dropdowns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Ensures the container takes the full width */
+  max-width: 1200px; /* Sets the maximum width of the dropdown */
+  margin: auto; /* Centers the container */
+  padding: 0 1rem; /* Adds padding on the left and right */
+}
+
+.dropdown {
+  width: 100%;
+  margin-bottom: 1rem; /* Adjust space between dropdowns */
+}
+
+.dropbtn {
+  /* background-color: #4CAF50; */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease;
+  border-radius: 0.3rem;
+}
+
+.dropbtn:hover {
+  /* background-color: #45a049; */
+}
+
+.dropdown-content {
+  background-color: #f9f9f9;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.project-item {
+  border: 1px solid #ddd;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  max-width: 300px; /* Maximum width for project items */
+  margin: 0 auto; /* Center project items within the grid */
+}
+
+.project-item img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any extra space below the image */
+}
+
+.project-item a {
+  text-decoration: none;
+  color: black; /* Title color */
+}
+
+.project-title {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.2rem; /* Title font size */
+}

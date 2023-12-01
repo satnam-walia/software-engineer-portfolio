@@ -1,0 +1,53 @@
+.contact-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .contact-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .contact-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    /* Icons can be set using a webfont or SVGs */
+  }
+  
+  /* Example using Unicode characters for icons */
+  .email-icon:before {
+    content: "\2709";
+  }
+  
+  .linkedin-icon:before {
+    content: "\f0e1";
+  }
+  
+  .github-icon:before {
+    content: "\f09b";
+  }
+  
