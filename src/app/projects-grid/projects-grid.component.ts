@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-projects-grid',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './projects-grid.component.html',
   styleUrls: ['./projects-grid.component.css'],
   animations: [
@@ -38,8 +39,8 @@ export class ProjectsGridComponent {
       { title: 'K-means with MapReduce and Publish/Subscribe', category: 'Big Data', imageUrl: './assets/big_data.png', link: 'https://example.com/projects/ocean-cleanup-bot' },
     ],
     2022: [
-      { title: 'Jira Metric Tool', category: 'API Programming', imageUrl: './assets/jira_metric_tool.png', link: 'https://example.com/projects/smart-agriculture-ai' },
-      { title: 'Squad Mood Metric',  category: 'Data Integration', imageUrl: './assets/squad_mood_metric.png', link: 'https://example.com/projects/smart-agriculture-ai' },
+      { title: 'Jira Metric Tool', category: 'API Programming', imageUrl: './assets/jira_metric_tool.png', link: './jira-metric-tool' },
+      { title: 'Squad Mood Metric',  category: 'Data Integration', imageUrl: './assets/squad_mood_metric.png', link: './squad-mood-metric' },
     ]
   };
 
