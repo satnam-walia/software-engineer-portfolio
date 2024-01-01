@@ -1,19 +1,21 @@
-<section class="projects-dropdowns">
-  <div *ngFor="let year of projectYears" class="dropdown">
-    <button class="dropbtn" (click)="toggleDropdown(year)">{{ year }}</button>
-    <div *ngIf="activeDropdown === year" class="dropdown-content">
-      <div class="projects-grid">
-        <div *ngFor="let project of projects[year]" class="project-item">
-          <!-- Add a space before [routerLink] -->
-          <a [routerLink]="project.link">
-            <img [src]="project.imageUrl" alt="{{ project.title }}">
-            <div class="project-description">
-              <h4 class="project-title">{{ project.title }}</h4>
-              <p class="project-category">{{ project.category }}</p>
-            </div>
-          </a>
+<div id = "projects">
+  <section class="projects-dropdowns">
+    <div *ngFor="let year of projectYears" class="dropdown">
+      <button class="dropbtn" (click)="toggleDropdown(year)">{{ year }}</button>
+      <div *ngIf="activeDropdown === year" class="dropdown-content">
+        <div class="projects-grid">
+          <div *ngFor="let project of projects[year]" class="project-item">
+            <!-- Add a space before [routerLink] -->
+            <a [routerLink]="project.link">
+              <img [src]="project.imageUrl" alt="{{ project.title }}">
+              <div class="project-description">
+                <h4 class="project-title">{{ project.title }}</h4>
+                <p class="project-category">{{ project.category }}</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
