@@ -11,25 +11,26 @@
 <section class="project-section">
     <div class="project-container">
         <header class="project-header">
-            <h1 class="project-title">Project 1</h1>
-            <p class="project-subtitle">Graphic Design</p>
+            <h1 class="project-title">Jira Metric Tool</h1>
+            <p class="project-subtitle">TypeScript, Postman, Github API, Jira API</p>
+            <p class="contribution-date">May 2022 - Aug 2022</p>
         </header>
         
         <table class="project-table">
             <tr>
                 <td class="project-table-cell">
                     <h2 id ="overview" class="project-table-heading">Project Overview</h2>
-                    <p class="project-table-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                    <p class="project-table-text">This project aimed to create trendlines for ten teams by analyzing the number of completed tickets, leveraging data from Jira and comparing it with GitHub Pull Requests. Key to this was a TypeScript script in Angular 12, designed to periodically post data onto a Splunk Dashboard and automate the extraction of new Jira tickets and Github Pull Requests weekly.</p>
                 </td>
                 <td class="project-table-cell">
                     <h2 id = "business-impact" class="project-table-heading">Business Impact</h2>
-                    <p class="project-table-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    <p class="project-table-text">Implementing this project led to a remarkable 15% increase in team productivity, as evidenced by the trendlines. The data-driven insights enabled management to streamline workflows and allocate resources more effectively, resulting in faster project turnaround times and a marked reduction in operational bottlenecks. This optimization not only enhanced team performance but also contributed to a significant reduction in time spent on manual data analysis, freeing up valuable resources for more critical tasks.</p>
                 </td>
             </tr>
         </table>
 
         <div class="image-container">
-            <img src="./assets/jira_metric_tool.png" alt="Jira Metric Tool Screenshot" class="full-width-image"/>
+            <img src="/assets/2022-jira-metric-tool/dashboard.png" alt="Jira Metric Tool Screenshot" class="full-width-image"/>
         </div>
         
         <footer class="image-footer">
@@ -39,12 +40,14 @@
         <table class="contributions-table">
             <tr>
                 <td class="contributions-cell">
-                    <h2 id="my-contribution" class="contributions-heading">My Contributions</h2>
-                    <p class="role-title">Brand Designer</p>
-                    <p class="contribution-date">Apr 2014 - Mar 2015</p>
+                    <h2 id="my-contribution" class="contributions-heading">My Challenges</h2>
                 </td>
                 <td class="contributions-cell">
-                    <p class="contribution-description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    <p class="contribution-description">The initial challenge was extracting relevant data from Jira and GitHub and filtering it for each team. This task involved carefully sifting through a vast amount of data to identify and extract the most pertinent information. Ensuring the data accurately reflected each team's performance was crucial for the integrity of the trendline analysis.</p>
+                    <br>
+                    <p class="contribution-description">A major hurdle was aligning and comparing data between Jira and GitHub, due to differing team labeling conventions on both platforms. The challenge lay in accurately mapping GitHub entries, which often lacked consistent team labels, to the corresponding Jira ticket numbers. This required a detailed understanding of both platforms' data structures and meticulous mapping to ensure correct team assignments.</p>
+                    <br>
+                    <p class="contribution-description">The final challenge was the transmission of this meticulously extracted and filtered data to Splunk. To guarantee accurate and functional data transfer, I initially had to manually post small data segments through Postman. This step was vital to confirm both the successful transfer and the correct formatting of data for Splunk's analysis, laying the groundwork for a reliable automated process for future postings.</p>
                 </td>
             </tr>
         </table>
