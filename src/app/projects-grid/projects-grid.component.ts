@@ -32,15 +32,15 @@ export class ProjectsGridComponent {
 
   projects: { [year: number]: Array<{ title: string; category: string; imageUrl: string; link: string; }> } = {
     2024: [
-      { title: 'Space Explorer VR', category: 'Squad Mood Metric', imageUrl: 'src/assets/big_data.png', link: 'https://example.com/projects/space-explorer-vr' }
+      { title: 'Space Explorer VR', category: 'Squad Mood Metric', imageUrl: 'assets/2024-portfolio/portfolio.png', link: 'https://example.com/projects/space-explorer-vr' }
     ],
     2023: [
-      { title: 'Architecture tactics with bus routes', category: 'System Design', imageUrl: './assets/stm.png', link: 'https://example.com/projects/ocean-cleanup-bot' },
-      { title: 'K-means with MapReduce and Publish/Subscribe', category: 'Big Data', imageUrl: './assets/big_data.png', link: 'https://example.com/projects/ocean-cleanup-bot' },
+      { title: 'Architecture tactics with bus routes', category: 'System Design', imageUrl: 'assets/2023-stm-tomtom/stm.png', link: 'https://example.com/projects/ocean-cleanup-bot' },
+      { title: 'K-means with MapReduce and Publish/Subscribe', category: 'Big Data', imageUrl: 'assets/2023-big-data/big_data.png', link: 'https://example.com/projects/ocean-cleanup-bot' },
     ],
     2022: [
-      { title: 'Jira Metric Tool', category: 'API Programming', imageUrl: './assets/jira_metric_tool.png', link: './jira-metric-tool' },
-      { title: 'Squad Mood Metric',  category: 'Data Integration', imageUrl: './assets/squad_mood_metric.png', link: './squad-mood-metric' },
+      { title: 'Jira Metric Tool', category: 'API Programming', imageUrl: 'assets/2022-jira-metric-tool/jira_metric_tool.png', link: './jira-metric-tool' },
+      { title: 'Squad Mood Metric',  category: 'Data Integration', imageUrl: 'assets/2022-squad-mood-metric/squad_mood_metric.png', link: './squad-mood-metric' },
     ]
   };
 
