@@ -1,0 +1,69 @@
+<nav class="nav">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/jira-metric-tool#overview">Overview</a></li>
+        <li><a href="/jira-metric-tool#business-impact">Business Impact</a></li>
+        <li><a href="/jira-metric-tool#my-contribution">My Contributions</a></li>
+    </ul>
+</nav>
+
+
+<section class="project-section">
+    <div class="project-container">
+        <header class="project-header">
+            <h1 class="project-title">STM - TomTom</h1>
+            <p class="project-subtitle">Quality Attributs, Documentation</p>
+            <p class="contribution-date">Sep 2023 - Dec 2023</p>
+        </header>
+        
+        <table class="project-table">
+            <tr>
+                <td class="project-table-cell">
+                    <h2 id ="overview" class="project-table-heading">Project Overview</h2>
+                    <p class="project-table-text">In our LOG430 STM project, we developed a resilient architecture ensuring high availability and performance. We optimized for hardware failures and balanced resource use for sustained performance, focusing on continuous service.</p>
+                </td>
+                <td class="project-table-cell">
+                    <h2 id = "business-impact" class="project-table-heading">Project Impact</h2>
+                    <p class="project-table-text"> The impact of the project's first iteration was profound, particularly in handling computation failures. Chaos Monkey tests showed that artifacts like STM-1, TripComparator, and RouteTimeProvider were vulnerable to crashes. However, since TripComparator and RouteTimeProvider are stateless, the node controller efficiently restarted them upon failure. For STM-1, a more complex approach was required. When STM-1 crashed, a heartbeat detected the fault, triggering active redundancy. This process switched operations to STM-2, which seamlessly fetched data from STMDB1 where STM-1 left off, ensuring uninterrupted service continuity and robust system performance.</p>
+                    <p class="project-table-text"> In the second iteration of our project, we faced additional challenges with database and RabbitMQ crashes. To address these, our performance strategy involved three key tactics. First, we increased the resources of the STM databases (STMDB1 and STMDB2) to handle larger workloads and ensure data availability. Secondly, we maintained multiple copies of computation with STM-1 and STM-2, providing a fail-safe in case one system failed. Lastly, we reduced overhead between STM and TripComparator by utilizing RabbitMQ, which streamlined the communication and processing, enhancing overall system efficiency and reliability.</p>
+                </td>
+            </tr>
+        </table>
+
+       
+        <div class="slideshow-container">
+            <div *ngFor="let image of images; let i = index" class="slide fade" #slide>
+            <div class="numbertext">{{ i + 1 }} / {{ images.length }}</div>
+            <img [src]="image.url" style="width:100%">
+            <div class="text">{{ image.caption }}</div>
+            </div>
+        
+            <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+            <a class="next" (click)="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span *ngFor="let image of images; let i = index" class="dot" (click)="currentSlide(i + 1)"></span>
+        </div>
+        
+        <footer class="image-footer">
+            <p class="image-description">Description of the Jira Metric Tool interface.</p>
+        </footer>
+
+        <table class="contributions-table">
+            <tr>
+                <td class="contributions-cell">
+                    <h2 id="my-contribution" class="contributions-heading">My Contributions</h2>
+                    <p class="role-title">Brand Designer</p>
+                </td>
+                <td class="contributions-cell">
+                    <p class="contribution-description">In this project, my role extended beyond just creating documentation and diagrams; I worked closely with the development team to ensure that the documentation accurately aligned with what was being realized in the code. This collaboration was crucial for maintaining the integrity and relevance of our architectural documentation.</p>
+                    <p class="contribution-description">As I developed the Quality Attributes documentation, Module, C&C, and Allocation diagrams, and the element catalogue for both the availability and performance iterations, I continuously liaised with the developers. This interaction was essential to gain a deep understanding of the practical aspects of our system’s architecture and to ensure that the theoretical framework I was documenting mirrored the actual implementation.</p>
+                    <p class="contribution-description">This close collaboration enabled me to make real-time adjustments to the documentation, reflecting any changes or decisions made during the development process. It ensured that the documentation was not only accurate but also a useful reference that the development team could rely on for guidance and clarity. This synergy between documentation and development was key to the project's success, ensuring that our architectural plans were effectively translated into a robust and high-performing system.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <app-contact></app-contact>
+</section>

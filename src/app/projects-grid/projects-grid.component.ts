@@ -35,8 +35,8 @@ export class ProjectsGridComponent {
       { title: 'Space Explorer VR', category: 'Squad Mood Metric', imageUrl: 'assets/2024-portfolio/portfolio.png', link: 'https://example.com/projects/space-explorer-vr' }
     ],
     2023: [
-      { title: 'Architecture tactics with bus routes', category: 'System Design', imageUrl: 'assets/2023-stm-tomtom/stm.png', link: 'https://example.com/projects/ocean-cleanup-bot' },
-      { title: 'K-means with MapReduce and Publish/Subscribe', category: 'Big Data', imageUrl: 'assets/2023-big-data/big_data.png', link: 'https://example.com/projects/ocean-cleanup-bot' },
+      { title: 'Architecture tactics with bus routes', category: 'System Design', imageUrl: 'assets/2023-stm-tomtom/stm.png', link: './stm-tomtom' },
+      { title: 'K-means with MapReduce and Publish/Subscribe', category: 'Big Data', imageUrl: 'assets/2023-big-data/big_data.png', link: './big-data' },
     ],
     2022: [
       { title: 'Jira Metric Tool', category: 'API Programming', imageUrl: 'assets/2022-jira-metric-tool/jira_metric_tool.png', link: './jira-metric-tool' },
