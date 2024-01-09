@@ -11,21 +11,27 @@ import { routes } from './app.routes';
 
 
 
-
-
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    templateUrl: './app.component.html',
-    imports: [CommonModule, RouterOutlet, ContactComponent, ExperienceComponent,
-        HeaderComponent, NavigationComponent, ProjectsGridComponent, AboutComponent]
+  selector: 'app-root',
+  standalone: true,
+  templateUrl: './app.component.html',
+  imports: [
+      CommonModule, 
+      ContactComponent, 
+      ExperienceComponent,
+      HeaderComponent, 
+      NavigationComponent, 
+      ProjectsGridComponent, 
+      AboutComponent,
+      RouterOutlet
+  ]
 })
 export class AppComponent implements OnInit {
   constructor(private router: Router) {}
 
   title = 'software-engineer-portfolio';
    ngOnInit() {
-    this.router.navigate(routes)
+    this.router.navigate([''])
    }
 }
 

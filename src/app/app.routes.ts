@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './homepage/home.component';
 import { JiraMetricToolComponent } from './projects/2022/jira-metric-tool/jira-metric-tool.component';
 import { SquadMoodMetricComponent } from './projects/2022/squad-mood-metric/squad-mood-metric.component';
 import { BigDataComponent } from './projects/2023/big-data/big-data.component';

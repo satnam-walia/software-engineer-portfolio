@@ -1,0 +1,28 @@
+{
+    "experience": {
+      "programmerAnalystIntern": {
+        "role": "Programmer Analyst Intern",
+        "company": "Shared Service Canada (SSC)",
+        "location": "Remote",
+        "duration": "Jan 2024 – Apr 2024",
+        "description": [
+          "Collect requirements from end users and identify opportunities to create the automation strategies",
+          "Develop solution for automated workflows data visualizations and reports",
+          "Conceptualizing data that is crucial for automation",
+          "Run performance tests"
+        ]
+      },
+      "softwareDeveloperIntern": {
+        "role": "Software Developer Intern",
+        "company": "Royal Bank Of Canada (RBC)",
+        "location": "Montreal, QC",
+        "duration": "Jan 2022 – Dec 2022",
+        "description": [
+          "Achieved a 25% increase in user engagement with enhanced experience and functionality of webpages",
+          "...",
+          "Implemented reusable components"
+        ]
+      }
+    }
+  }
+  

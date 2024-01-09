@@ -1,0 +1,19 @@
+<div class="slider-container">
+    <!-- Image View -->
+    <div *ngIf="slides[currentIndex].type === 'image'" class="image-container" (click)="toggleImagePopOut()">
+      <div *ngIf="slides.length > 1" class="control prev" (click)="showPrev(); $event.stopPropagation()">&#9664;</div>
+      <img [src]="slides[currentIndex].url" alt="Slideshow image">
+      <div *ngIf="slides.length > 1" class="control next" (click)="showNext(); $event.stopPropagation()">&#9654;</div>
+    </div>
+  
+    <!-- Code Snippet View -->
+    <div *ngIf="slides[currentIndex].type === 'code'" class="code-container">
+      <pre><code>{{ slides[currentIndex].codeContent }}</code></pre>
+    </div>
+  
+    <!-- Pop-Out View for Images -->
+    <div *ngIf="isImagePopOut" class="pop-out-view" (click)="toggleImagePopOut()">
+      <img [src]="slides[currentIndex].url" alt="Expanded slideshow image">
+    </div>
+  </div>
+  
