@@ -1,3 +1,4 @@
+
 .tp-wrapper {
     -webkit-perspective: 800px;
             perspective: 800px;
@@ -37,6 +38,23 @@
     transform: rotateY(-180deg);
   }
 
+  .mobile-slider {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center; /* Center text horizontally */
+    background: #f9f9f9;
+  }
+  
+  .slide.active {
+    display: block;
+  }
   .about-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -61,11 +79,4 @@
     height: auto; /* Remove fixed height if you had any */
     min-height: 200px; /* Optional: Sets a minimum height for shorter content boxes */
   }
-  
-  /* Responsive adjustments for smaller screens */
-  @media (max-width: 768px) {
-    .about-container {
-      grid-template-columns: 1fr; /* Stack the sections on smaller screens */
-    }
-  }
-  
+

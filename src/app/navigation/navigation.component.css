@@ -1,29 +1,62 @@
+/* Base styles */
 nav {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem;
-    background-color: #333;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  position: relative; /* Adjusted for responsive dropdown */
+  z-index: 10;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Center items vertically */
+}
+
+nav li a {
+  color: red;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid red;
+  border-radius: 4px;
+}
+
+nav li a:hover {
+  background-color: white;
+  color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav {
+      justify-content: center; /* Center the nav bar on mobile */
+      padding: 0.5rem 0; /* Reduce padding on mobile */
   }
-  
+
   nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+      flex-direction: column; /* Stack the links vertically */
+      width: 100%; /* Full width for the dropdown */
+      position: absolute;
+      top: 100%; /* Position the dropdown below the nav bar */
+      left: 0;
+      background-color: #333;
+      padding: 1rem 0; /* Padding inside the dropdown */
+      border-radius: 0 0 4px 4px; /* Rounded corners on the bottom */
+      gap: 0; /* Remove the gap for a tighter mobile layout */
+      display: none; /* Hide the dropdown by default */
   }
-  
+
+  nav ul.active {
+      display: flex; /* Show the dropdown when active */
+  }
+
   nav li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border: 1px solid white;
-    border-radius: 4px;
+      display: block; /* Full-width links in the dropdown */
+      text-align: center; /* Center text in the dropdown */
   }
-  
-  nav li a:hover {
-    background-color: white;
-    color: #333;
-  }
-  
-  
+}
+

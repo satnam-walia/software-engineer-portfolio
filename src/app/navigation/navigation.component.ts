@@ -1,4 +1,3 @@
-// navigation.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -11,5 +10,12 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-  // Your navigation logic will go here
+
+  constructor() {}
+
+  scrollToSection(event: Event, sectionId: string): void {
+    event.preventDefault();
+    const section = document.querySelector(sectionId);
+    section?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+  }
 }

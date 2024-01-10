@@ -1,9 +1,8 @@
 <nav>
-    <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Connect</a></li>
-    </ul>
-  </nav>
-  
+  <ul>
+    <li><a href="#about" (click)="scrollToSection($event, '#about')">About Me</a></li>
+    <li><a href="#projects" (click)="scrollToSection($event, '#projects')">Projects</a></li>
+    <li><a href="#experience" (click)="scrollToSection($event, '#experience')">Experience</a></li>
+    <li><a href="#contact" (click)="scrollToSection($event, '#contact')">Connect</a></li>
+  </ul>
+</nav>
