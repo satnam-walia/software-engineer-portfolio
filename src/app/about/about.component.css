@@ -39,22 +39,27 @@
 
   .about-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-    grid-template-rows: auto auto; /* Two rows, adjust automatically to content */
-    gap: 20px; /* Space between grid items */
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr; /* This makes all rows the same height */
+    gap: 20px;
     justify-content: center;
-    align-items: center;
+    align-items: start; /* Aligns the content at the top of the grid */
     padding: 20px;
     max-width: 1200px;
-    margin: auto; 
+    margin: auto;
   }
   
   .about-section {
-    background: #f9f9f9; /* Optional: background color for sections */
+    display: flex; /* Establishes this section as a flex container */
+    flex-direction: column; /* Stacks child elements (your list items) vertically */
+    justify-content: flex-start; /* Aligns children to the top of the parent container */
+    background: #f9f9f9;
     padding: 15px;
-    border-radius: 8px; /* Optional: rounded corners */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: box shadow for depth */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: left;
+    height: auto; /* Remove fixed height if you had any */
+    min-height: 200px; /* Optional: Sets a minimum height for shorter content boxes */
   }
   
   /* Responsive adjustments for smaller screens */

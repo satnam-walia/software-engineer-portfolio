@@ -1,45 +1,71 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { ExperienceComponent } from './experience.component';
 import { TranslationService } from '../translation.service';
-
-// Mock TranslationService
-const mockTranslationService = {
-  loadTranslations: jest.fn().mockResolvedValue(true),
-  translate: jest.fn((key: string) => `translated-${key}`)
-};
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 describe('ExperienceComponent', () => {
   let component: ExperienceComponent;
   let fixture: ComponentFixture<ExperienceComponent>;
+  let translationService: TranslationService;
+  let httpTestingController: HttpTestingController;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ExperienceComponent],
-      providers: [
-        { provide: TranslationService, useValue: mockTranslationService }
-      ]
-    })
-    .compileComponents();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+    });
+
+    TestBed.overrideComponent(ExperienceComponent, {
+      set: {
+        providers: [TranslationService],
+      },
+    });
 
     fixture = TestBed.createComponent(ExperienceComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    translationService = TestBed.inject(TranslationService);
+    httpTestingController = TestBed.inject(HttpTestingController);
   });
 
-  it('should create', () => {
+  afterEach(() => {
+    httpTestingController.verify();
+  });
+
+  it('should create the component', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should translate experience details', async () => {
-    // This assumes loadTranslations is called in ngOnInit or similar lifecycle hook
-    await fixture.whenStable(); // Wait for async operations to complete
+  it('should load and display translations', fakeAsync(() => {
+    const dummyTranslations = {
+      greeting: 'Hello, world!',
+      welcome: 'Welcome to my app.',
+    };
 
-    // Check if the translate function of the mockTranslationService is called
-    expect(mockTranslationService.translate).toHaveBeenCalled();
+    spyOn(translationService, 'loadTranslations').and.returnValue(Promise.resolve(dummyTranslations));
 
-    // Example: Check if the first experience's role is translated
-    expect(component.experiences[0]?.role).toBe('translated-experience.programmerAnalystIntern.role');
+    component.ngOnInit();
 
-    // Add more assertions as needed for other properties
-  });
+    tick(); // Simulate the passage of time
+
+    expect(component.greetingTranslation).toEqual(dummyTranslations.greeting);
+    expect(component.welcomeTranslation).toEqual(dummyTranslations.welcome);
+
+    const req = httpTestingController.expectOne('./assets/i18n/en.json');
+    expect(req.request.method).toBe('GET');
+    req.flush(dummyTranslations);
+
+    httpTestingController.verify();
+  }));
+
+  // it('should handle translation loading error', fakeAsync(() => {
+  //   spyOn(translationService, 'loadTranslations').and.returnValue(Promise.reject('Test error'));
+  //   spyOn(console, 'error');
+
+  //   component.ngOnInit();
+
+  //   tick();
+
+  //   expect(console.error).toHaveBeenCalledWith('Error loading translations:', 'Test error');
+
+  //   httpTestingController.verify();
+  // }));
 });

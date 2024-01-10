@@ -25,8 +25,8 @@
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "enableIvy": true,
+    "i18nOutFile": "./src/locale/messages.xlf",
+    "i18nOutFormat": "xlf"
   }
 }

@@ -2,6 +2,7 @@ import { Component, ViewChildren, QueryList, ElementRef, AfterViewInit } from '@
 import { CommonModule } from '@angular/common';
 import { ContactComponent } from "../../../contact/contact.component";
 import { ImageSliderComponent, Slide } from '../../../imageslider/imageslider.component';
+import { javaCodeContent } from './code-content';
 
 @Component({
     selector: 'app-stm-tomtom',
@@ -11,11 +12,13 @@ import { ImageSliderComponent, Slide } from '../../../imageslider/imageslider.co
     imports: [CommonModule, ContactComponent,ImageSliderComponent]
 })
 export class StmTomtomComponent {
+    javaCodeContent: string = javaCodeContent;
+
     slides: Slide[] = [
-        { type: 'image', url: '/assets/2023-stm-tomtom/c2c-context.png' },
-        { type: 'image', url: '/assets/2023-stm-tomtom/c2c-primaire.png'},
-        { type: 'image', url: '/assets/2023-stm-tomtom/c2c-catalogue.png'},
-        { type: 'code', codeContent: 'console.log("Hello, world!");' }, // Example code snippet
+        { type: 'image', url: '/assets/images/2023-stm-tomtom/c2c-context.png' },
+        { type: 'image', url: '/assets/images/2023-stm-tomtom/c2c-primaire.png'},
+        { type: 'image', url: '/assets/images/2023-stm-tomtom/c2c-catalogue.png'},
+        // { type: 'code', codeContent: javaCodeContent }, // Example code snippet
         // ... more images
         ];
 }

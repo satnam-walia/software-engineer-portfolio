@@ -1,22 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-// Import HttpClientModule if making HTTP requests
-import { HttpClientModule } from '@angular/common/http';
-
-// Import FormsModule, ReactiveFormsModule for forms
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-// Import your components
-
+import { HttpClientModule, HttpClient } from '@angular/common/http'; // Import HttpClientModule and HttpClient
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { TranslationService } from './translation.service';
 import { routes } from './app.routes';
 
+
 @NgModule({
-    imports: [
-      BrowserModule,
-      ReactiveFormsModule,
-      RouterModule.forRoot(routes)
-    ],
-   })
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes), // Make sure you have defined "routes" correctly
+  ],
+  providers: [TranslationService], // Add TranslationService to providers
+})
 export class AppModule { }
