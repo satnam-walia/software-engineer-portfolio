@@ -52,3 +52,12 @@
 .github-icon:before {
   content: "\f09b";
 }
+
+h2 {
+  background: linear-gradient(to right, #2c4dff, #fd12b3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* Fallback for older versions of Safari */
+  font-size: 64px; /* Set the font size to 64px */
+}

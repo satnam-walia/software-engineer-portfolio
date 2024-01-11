@@ -1,63 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Apply the font family to all relevant elements */
+.experience-container, .role-title, .experience-meta, .experience-company, .experience-location, .experience-duration, .experience-description {
+  font-family: 'Roboto', sans-serif;
+}
+
 .experience-container {
   display: flex;
-  flex-direction: column; /* Align children vertically */
-  align-items: center; /* Center children horizontally */
-  justify-content: center; /* Center children vertically if there's space */
-  padding: 20px; /* Padding around the content */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .experience-entry {
   display: flex;
-  flex-direction: row; /* Keep the logo and details side by side */
-  align-items: flex-start; /* Align items to the start of the flex container vertically */
-  width: 100%; /* Full width of the container */
-  max-width: 1000px; /* Maximum width of each entry */
-  background-color: #fff; /* Assuming a white background */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Padding inside each entry */
-  margin-bottom: 20px; /* Space between entries */
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1100px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: inherit; /* Inherit the font family from the parent */
+  border: 1px solid black; /* Add a 1px solid black border */
 }
 
 .company-logo {
-  flex-shrink: 0; /* Prevent the logo from shrinking */
-  width: 80px; /* Fixed width for the logo */
-  height: 80px; /* Fixed height for the logo */
-  /* border-radius: 50%; Makes the image circular */
-  margin-right: 20px; /* Space between the logo and the details */
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
 }
 
 .experience-details {
-  flex-grow: 1; /* Allow the details to take up the remaining space */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  font-family: inherit; /* Inherit the font family from the parent */
+  font-size: 20px;
 }
 
 .role-title {
-  font-size: 1.25rem; /* Adjusted size for h5 equivalent */
-  font-weight: bold; /* Bold font for the role title */
-  margin: 0; /* Remove margins to reduce space */
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .experience-meta {
   font-style: italic;
-  margin: 0; /* No extra margin for duration */
-  color:grey;
+  font-size: 15px;
+  margin-top: 5.5px;
+  color: grey;
 }
 
 .experience-company,
 .experience-location,
 .experience-duration {
-  font-size: 0.9rem; /* Smaller font size for meta information */
-  margin: 0; /* Remove margins to reduce space */
+  font-size: 20px;
+  margin-top: 5.5px;
 }
 
 .experience-description {
-  list-style-type: disc; /* Bullet points for the list */
-  padding-left: 20px; /* Space for bullet points */
-  margin-top: 10px; /* Space above the list */
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 .experience-description li {
-  margin: 5px 0; /* Space between list items */
+  margin: 10px 0;
+}
+
+/* You can directly apply the h2 gradient style here */
+h2 {
+  background: linear-gradient(to right, #2c4dff, #fd12b3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: 64px; /* Set the font size to 64px */
 }

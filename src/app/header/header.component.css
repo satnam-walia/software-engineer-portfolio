@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     min-height: 10vh; /* This will make sure your section takes at least the height of the viewport */
-    background: #f8f8f8; /* Example background color */
+    background: white; /* Example background color */
     padding: 40px; /* Add some padding */
   }
   
@@ -29,6 +29,7 @@
   .heading-jumbo {
     font-size: 3rem; /* Much larger font size for the heading */
     margin-top: 1rem; /* Add space above the heading */
+    min-height: 4rem; /* Adjust this value based on your font and line height */
     color: #333; /* Darker color for better readability */
   }
   
@@ -43,6 +44,19 @@
       font-size: 1.5rem;
     }
   }
+
+  .cursor {
+    font-weight: 100;
+    color: black;
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      color: transparent;
+    }
+  }
+  
 
   
   
