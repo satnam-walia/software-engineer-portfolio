@@ -38,6 +38,8 @@
   /* Removed box-shadow property */
   border-radius: 0.3rem;
   margin-top: 0.5rem;
+  will-change: transform, opacity;
+  transform-origin: top;
 }
 
 .dropdown-content a {

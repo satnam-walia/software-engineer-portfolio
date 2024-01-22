@@ -11,22 +11,17 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./projects-grid.component.css'],
   animations: [
     trigger('dropdownAnimation', [
-      state('closed', style({
-        opacity: 0,
-        maxHeight: '0px',
-        overflow: 'hidden',
-        visibility: 'hidden'
-      })),
-      state('open', style({
-        opacity: 1,
-        maxHeight: '500px', // should be large enough to contain the content
-        visibility: 'visible'
-      })),
-      transition('closed <=> open', animate('500ms ease-in-out'))
+      transition(':enter', [ // ':enter' is alias for 'void => *'
+        style({ height: 0, opacity: 0, transform: 'scaleY(0.8)' }), // Start with no height, transparent, and slightly scaled down
+        animate('300ms ease-out', style({ height: '*', opacity: 1, transform: 'scaleY(1)' })) // Animate to natural height, opaque, and scaled to normal
+      ]),
+      transition(':leave', [ // ':leave' is alias for '* => void'
+        animate('300ms ease-in', style({ height: 0, opacity: 0, transform: 'scaleY(0.8)' })) // Animate to no height, transparent, and slightly scaled down
+      ])
     ])
   ]
 })
-export class ProjectsGridComponent {
+export class ProjectsGridComponent{
   projectYears: number[] = [2024, 2023, 2022];
   activeDropdown: number | null = null;
 

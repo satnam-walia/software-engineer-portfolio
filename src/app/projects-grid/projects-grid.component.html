@@ -1,5 +1,6 @@
 <div id = "projects">
   <section class="projects-dropdowns">
+    <h2>Projects</h2>
     <div *ngFor="let year of projectYears" class="dropdown">
       <button class="dropbtn" (click)="toggleDropdown(year)">{{ year }}</button>
       <div *ngIf="activeDropdown === year" class="dropdown-content">

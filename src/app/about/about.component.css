@@ -70,7 +70,7 @@ body {
 }
 
 .about-section {
-  background: #f9f9f9;
+  background: white;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -78,6 +78,7 @@ body {
   width: 300px; /* Fixed width */
   height: 250px; /* Fixed height */
   margin-bottom: 20px; /* Space between rows */
+  border: 1px solid black;
 }
 
 .about-section h3 {
