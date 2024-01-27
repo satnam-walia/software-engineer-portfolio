@@ -1,11 +1,32 @@
 /* Base styles */
 nav {
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem;
   background-color: white;
-  position: relative; /* Adjusted for responsive dropdown */
-  z-index: 10;
+  position: sticky;
+  display: block;
+  top: 0px; /* Align to the top of the viewport */
+  left: 0px;
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 10; /* Keep it above other content */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure vertical alignment */
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+  padding: 0 1rem; /* Padding left and right for the container */
+}
+
+.navbar-logo img {
+  height: auto; /* Maintain the aspect ratio */
+  width: 200px; /* Set the width of the logo */
+  vertical-align: middle; /* Align the image vertically */
+}
+
+.navbar-logo a {
+  border: none;
+  padding: 0;
 }
 
 nav ul {
@@ -14,49 +35,68 @@ nav ul {
   gap: 1rem;
   margin: 0;
   padding: 0;
-  align-items: center; /* Center items vertically */
+  align-items: center; /* Center the list items vertically */
 }
 
-nav li a {
+nav ul li a {
   color: black;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border: 1px solid black;
   border-radius: 4px;
+  line-height: normal; /* Reset line-height to avoid affecting height */
 }
 
-nav li a:hover {
+nav ul li a:hover {
   background-color: white;
   color: #333;
 }
 
+.dropdown-toggle {
+  display: none; /* Hidden by default */
+  font-size: 1.5rem; /* Example size, adjust as needed */
+  border: none;
+  background: none;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
-  nav {
-      justify-content: center; /* Center the nav bar on mobile */
-      padding: 0.5rem 0; /* Reduce padding on mobile */
+  .nav-container {
+    flex-direction: row; /* Keep the navbar logo and toggle on the same row */
+    justify-content: space-between; /* Adjust the space between logo and toggle */
+  }
+
+  .navbar-logo img {
+    width: 100px; /* Smaller size for mobile */
+    height: auto; /* Maintain the aspect ratio */
   }
 
   nav ul {
-      flex-direction: column; /* Stack the links vertically */
-      width: 100%; /* Full width for the dropdown */
-      position: absolute;
-      top: 100%; /* Position the dropdown below the nav bar */
-      left: 0;
-      background-color: #333;
-      padding: 1rem 0; /* Padding inside the dropdown */
-      border-radius: 0 0 4px 4px; /* Rounded corners on the bottom */
-      gap: 0; /* Remove the gap for a tighter mobile layout */
-      display: none; /* Hide the dropdown by default */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%; /* Dropdown should start right below the navbar */
+    background-color: #333;
+    padding: 1rem 0;
+    border-radius: 0 0 4px 4px;
+    display: none; /* Hide initially */
+    z-index: 9; /* Ensure dropdown appears below navbar */
   }
 
   nav ul.active {
-      display: flex; /* Show the dropdown when active */
+    display: flex; /* Show when active */
   }
 
-  nav li a {
-      display: block; /* Full-width links in the dropdown */
-      text-align: center; /* Center text in the dropdown */
+  nav ul li a {
+    display: block;
+    text-align: center;
+    border: none; /* Remove borders on mobile for a cleaner look */
+    color: white; /* Change text color for visibility against the dark background */
+  }
+
+  .dropdown-toggle {
+    display: block; /* Show the toggle button on mobile */
+    margin-right: 1rem; /* Add some margin to the right of the toggle button */
   }
 }
 

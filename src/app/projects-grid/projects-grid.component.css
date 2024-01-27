@@ -77,6 +77,12 @@
 
 /* Optional: Add media queries for responsiveness */
 @media (max-width: 600px) {
+  .projects-dropdowns {
+    width: 414px; /* Ensures the container takes the full width */
+    margin: 0; /* Centers the container */
+    padding: 0; /* Adds padding on the left and right */
+  }
+
   .projects-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }

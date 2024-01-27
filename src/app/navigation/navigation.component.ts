@@ -18,4 +18,12 @@ export class NavigationComponent {
     const section = document.querySelector(sectionId);
     section?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
   }
+
+  toggleDropdown() {
+    const navbarMenu = document.getElementById('navbar-menu');
+    if (navbarMenu) {
+      navbarMenu.classList.toggle('active');
+    }
+  }
+  
 }

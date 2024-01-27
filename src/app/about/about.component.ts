@@ -41,7 +41,8 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.breakpointObserver.observe([
-      Breakpoints.Handset
+      Breakpoints.Handset,
+      Breakpoints.TabletPortrait
     ]).subscribe(result => {
       this.isMobile = result.matches;
     });
