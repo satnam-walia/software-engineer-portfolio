@@ -1,12 +1,7 @@
-<nav class="nav">
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="jira-metric-tool#overview">Overview</a></li>
-        <li><a href="jira-metric-tool#business-impact">Business Impact</a></li>
-        <li><a href="jira-metric-tool#my-contribution">My Contributions</a></li>
-    </ul>
-</nav>
-
+<app-navigation [navItems]="[
+  { label: 'Home', path: '/', isHome: true },
+  { path: '#my-contribution', label: 'My Contributions' }
+]"></app-navigation>
 
 <section class="project-section">
     <div class="project-container">

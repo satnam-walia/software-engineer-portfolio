@@ -27,7 +27,7 @@ export class ProjectsGridComponent{
 
   projects: { [year: number]: Array<{ title: string; category: string; imageUrl: string; link: string; }> } = {
     2024: [
-      { title: 'Space Explorer VR', category: 'Squad Mood Metric', imageUrl: 'assets/images/2024-portfolio/portfolio.png', link: 'https://example.com/projects/space-explorer-vr' }
+      { title: 'Web Portfolio', category: 'Frontend Developpment', imageUrl: 'assets/images/2024-portfolio/portfolio.png', link: 'https://example.com/projects/space-explorer-vr' }
     ],
     2023: [
       { title: 'Architecture tactics with bus routes', category: 'System Design', imageUrl: 'assets/images/2023-stm-tomtom/stm.png', link: './stm-tomtom' },

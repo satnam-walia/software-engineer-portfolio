@@ -1,6 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+
+interface NavItem {
+  label: string;
+  path: string;
+  isHome?: boolean;
+}
 
 @Component({
   selector: 'app-navigation',
@@ -10,20 +16,24 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
+  @Input() navItems: NavItem[] = [];
+  isDropdownOpen: boolean = false;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  scrollToSection(event: Event, sectionId: string): void {
+  toggleDropdown(): void {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  scrollToSection(event: Event, path: string): void {
     event.preventDefault();
-    const section = document.querySelector(sectionId);
+    const section = document.querySelector(path);
     section?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
   }
 
-  toggleDropdown() {
-    const navbarMenu = document.getElementById('navbar-menu');
-    if (navbarMenu) {
-      navbarMenu.classList.toggle('active');
-    }
+  navigateHome(event: Event): void {
+    event.preventDefault();
+    this.router.navigate(['/']);
   }
   
 }

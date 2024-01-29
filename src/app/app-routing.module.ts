@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { JiraMetricToolComponent } from './projects/2022/jira-metric-tool/jira-metric-tool.component';
 import { SquadMoodMetricComponent } from './projects/2022/squad-mood-metric/squad-mood-metric.component';
+import { HomeComponent } from './homepage/home.component';
 
 export const routes: Routes = [
+  { path: '/', component: HomeComponent }, // Default route
   { path: 'jira-metric-tool', component: JiraMetricToolComponent },
   { path: 'squad-mood-metric', component: SquadMoodMetricComponent },
   // ... other routes

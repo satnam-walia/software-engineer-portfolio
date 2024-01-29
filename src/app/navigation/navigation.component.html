@@ -1,12 +1,11 @@
 <nav>
-  <div class="nav-container" >
+  <div class="nav-container">
     <div class="navbar-logo"><a href="/"><img src="./assets/images/icons/Satnam_Logo.jpeg" alt="Logo"></a></div>
     <button class="dropdown-toggle" (click)="toggleDropdown()">☰</button>
-    <ul id="navbar-menu">
-      <li><a href="#about" (click)="scrollToSection($event, '#about')">About Me</a></li>
-      <li><a href="#projects" (click)="scrollToSection($event, '#projects')">Projects</a></li>
-      <li><a href="#experience" (click)="scrollToSection($event, '#experience')">Experience</a></li>
-      <li><a href="#contact" (click)="scrollToSection($event, '#contact')">Connect</a></li>
+    <ul id="navbar-menu" [class.open]="isDropdownOpen">
+      <li *ngFor="let item of navItems">
+        <a href="{{item.path}}" (click)="scrollToSection($event, item.path)">{{item.label}}</a>
+      </li>
     </ul>
   </div>
 </nav>
