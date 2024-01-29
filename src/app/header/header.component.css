@@ -6,7 +6,6 @@
   min-height: 10vh; /* This will make sure your section takes at least the height of the viewport */
   background: white; /* Example background color */
   padding: 40px; /* Add some padding */
-  margin-top: 200px;
 }
 
 .container {

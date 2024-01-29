@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from "../../../contact/contact.component";
 import { ImageSliderComponent, Slide } from '../../../imageslider/imageslider.component';
 import { javaCodeContent } from './code-content';
+import { NavigationComponent } from '../../../navigation/navigation.component';
 
 @Component({
     selector: 'app-stm-tomtom',
     standalone: true,
     templateUrl: './stm-tomtom.component.html',
     styleUrl: './stm-tomtom.component.css',
-    imports: [CommonModule, ContactComponent,ImageSliderComponent]
+    imports: [CommonModule, ContactComponent,ImageSliderComponent,NavigationComponent]
 })
 export class StmTomtomComponent {
     javaCodeContent: string = javaCodeContent;

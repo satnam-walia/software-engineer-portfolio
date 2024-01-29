@@ -5,7 +5,6 @@ import { Router, RouterModule } from '@angular/router';
 interface NavItem {
   label: string;
   path: string;
-  isHome?: boolean;
 }
 
 @Component({
@@ -30,10 +29,4 @@ export class NavigationComponent {
     const section = document.querySelector(path);
     section?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
   }
-
-  navigateHome(event: Event): void {
-    event.preventDefault();
-    this.router.navigate(['/']);
-  }
-  
 }

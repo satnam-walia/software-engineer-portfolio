@@ -1,10 +1,15 @@
 <nav>
   <div class="nav-container">
-    <div class="navbar-logo"><a href="/"><img src="./assets/images/icons/Satnam_Logo.jpeg" alt="Logo"></a></div>
+    <div class="navbar-logo">
+      <a href="/">
+        <img src="./assets/images/icons/Satnam_Logo.jpeg" alt="Logo">
+      </a>
+    </div>
     <button class="dropdown-toggle" (click)="toggleDropdown()">☰</button>
     <ul id="navbar-menu" [class.open]="isDropdownOpen">
       <li *ngFor="let item of navItems">
-        <a href="{{item.path}}" (click)="scrollToSection($event, item.path)">{{item.label}}</a>
+        <!-- Modified click event to also toggle the dropdown -->
+        <a [routerLink]="item.path" (click)="isDropdownOpen = false; scrollToSection($event, item.path)">{{ item.label }}</a>
       </li>
     </ul>
   </div>

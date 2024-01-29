@@ -1,11 +1,7 @@
-<nav class="nav">
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="squad-mood-metric#overview">Overview</a></li>
-        <li><a href="squad-mood-metric#business-impact">Business Impact</a></li>
-        <li><a href="squad-mood-metric#my-contribution">My Contributions</a></li>
-    </ul>
-</nav>
+<app-navigation [navItems]="[
+  { label: 'Home', path: '/'},
+  { path: '#my-contribution', label: 'My Contributions' }
+]"></app-navigation>
 
 
 <section class="project-section">

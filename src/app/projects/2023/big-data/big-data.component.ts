@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactComponent } from "../../../contact/contact.component";
 import { ImageSliderComponent, Slide } from "../../../imageslider/imageslider.component";
+import { NavigationComponent } from '../../../navigation/navigation.component';
 
 
 
@@ -10,7 +11,7 @@ import { ImageSliderComponent, Slide } from "../../../imageslider/imageslider.co
     standalone: true,
     templateUrl: './big-data.component.html',
     styleUrl: './big-data.component.css',
-    imports: [CommonModule, ContactComponent, ImageSliderComponent]
+    imports: [CommonModule, ContactComponent, ImageSliderComponent, NavigationComponent ]
 })
 export class BigDataComponent {
 

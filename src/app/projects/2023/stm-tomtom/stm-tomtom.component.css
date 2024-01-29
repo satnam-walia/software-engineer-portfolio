@@ -211,4 +211,82 @@ nav {
     from {opacity: .4} 
     to {opacity: 1}
   }
+
+  /* Mobile styles */
+@media (max-width: 768px) {
+
+  .project-container {
+    margin: auto;
+    padding: 20px;
+  }
+
+  .project-header {
+    margin-left: 19px;
+    text-align: left;
+  }
+
+  .project-title {
+    font-size: 36px;
+  }
+  .project-table-text{
+      margin-bottom: 0;
+  }
+
+  .project-subtitle, .contribution-description {
+    font-size: 16px;
+  }
+
+  .project-table, .contributions-table {
+    display: block;
+  }
+
+  .project-table-cell, .contributions-cell {
+    padding: 20px;
+    display: block;
+  }
+
+  .project-table-cell {
+    margin-bottom: 20px;
+  }
+
+  .image-container {
+    margin: 0;
+  }
+
+  .full-width-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-footer {
+    padding: 10px;
+  }
+
+  .image-description, .role-title, .contribution-date {
+    font-size: 14px;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  nav li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  nav li a {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+  }
+
+}
+
+
   
