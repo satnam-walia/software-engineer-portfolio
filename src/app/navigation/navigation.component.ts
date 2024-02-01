@@ -30,11 +30,21 @@ export class NavigationComponent {
   scrollToSection(event: Event, path: string): void {
     event.preventDefault();
     const section = document.querySelector(path);
-    section?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+  
+    if (section) {
+      const headerOffset = 60; // Height of your fixed header, adjust accordingly
+      const sectionPosition = section.getBoundingClientRect().top + window.scrollY - headerOffset;
+  
+      window.scrollTo({
+        top: sectionPosition,
+        behavior: 'smooth'
+      });
+    }
   }
 
   openResume(): void {
     this.showResumeModal = true;
+    this.isDropdownOpen = false; // Add this line to close the dropdown menu
     this.cdr.detectChanges(); // Manually trigger change detection
   }
 
