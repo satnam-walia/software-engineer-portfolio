@@ -86,16 +86,17 @@ nav ul li a:hover {
   height: auto; /* Auto height to fit content */
   max-height: 80vh; /* Maximum height to ensure it does not overflow the viewport */
   overflow-y: auto; /* Allow vertical scroll inside the modal if content exceeds its max-height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .resume-pdf {
-  width: auto; /* Allow it to scale with the container */
-  max-width: 100%; /* Ensure it does not overflow the modal-content */
-  height: auto; /* Auto height to maintain aspect ratio */
-  max-height: 75vh; /* Maximum height to fit within the modal and viewport */
-  display: block;
-  margin: 0 auto; /* Center it within the modal */
-  object-fit: contain; /* Ensure the content fits without being cut off */
+  max-width: 100%; /* Limit the width to the parent container */
+  max-height: 75vh; /* Limit the height to 75% of the viewport height */
+  display: block; /* Display block to fill the container */
+  object-fit: contain; /* Ensure the aspect ratio is maintained without cropping */
+  margin: 0 auto; /* Center the image horizontally */
 }
 
 /* Ensure the download button is positioned on top of the modal content */
@@ -106,6 +107,10 @@ nav ul li a:hover {
   /* Other styles for the button as you prefer */
 }
 
+
+body {
+  overflow-y: auto; /* Ensures body scroll is set back to auto by default */
+}
 /* Responsive styles */
 @media (max-width: 768px) {
   .nav-container {

@@ -7,7 +7,7 @@
         <div class="projects-grid">
           <div *ngFor="let project of projects[year]" class="project-item">
             <!-- Add a space before [routerLink] -->
-            <a [routerLink]="project.link">
+            <a [routerLink]="project.link" >
               <img [src]="project.imageUrl" alt="{{ project.title }}">
               <div class="project-description">
                 <h4 class="project-title">{{ project.title }}</h4>

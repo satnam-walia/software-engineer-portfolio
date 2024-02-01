@@ -1,4 +1,4 @@
-import { Component, ViewChildren, QueryList, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactComponent } from "../../../contact/contact.component";
 import { ImageSliderComponent, Slide } from '../../../imageslider/imageslider.component';
@@ -12,8 +12,12 @@ import { NavigationComponent } from '../../../navigation/navigation.component';
     styleUrl: './stm-tomtom.component.css',
     imports: [CommonModule, ContactComponent,ImageSliderComponent,NavigationComponent]
 })
-export class StmTomtomComponent {
+export class StmTomtomComponent implements OnInit {
     javaCodeContent: string = javaCodeContent;
+
+    ngOnInit() {
+        this.scrollToTop();
+      }
 
     slides: Slide[] = [
         { type: 'image', url: '/assets/images/2023-stm-tomtom/c2c-context.png' },
@@ -22,4 +26,8 @@ export class StmTomtomComponent {
         // { type: 'code', codeContent: javaCodeContent }, // Example code snippet
         // ... more images
         ];
+
+        scrollToTop() {
+            window.scrollTo(0, 0);
+          }
 }

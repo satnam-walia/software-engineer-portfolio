@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactComponent } from "../../../contact/contact.component";
 import { NavigationComponent } from '../../../navigation/navigation.component';
@@ -10,6 +10,13 @@ import { NavigationComponent } from '../../../navigation/navigation.component';
     styleUrl: './squad-mood-metric.component.css',
     imports: [CommonModule, ContactComponent, NavigationComponent ]
 })
-export class SquadMoodMetricComponent {
-
+export class SquadMoodMetricComponent implements OnInit  {
+    
+    ngOnInit() {
+        this.scrollToTop();
+      }
+    
+    scrollToTop() {
+        window.scrollTo(0, 0);
+      }
 }

@@ -19,6 +19,11 @@ export class JiraMetricToolComponent implements OnInit {
         const element = document.querySelector("#" + fragment);
         if (element) element.scrollIntoView({ behavior: "smooth" });
       });
-    }
 
+      this.scrollToTop();
+    }
+    
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    }
 }

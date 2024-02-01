@@ -21,7 +21,7 @@
   </div>
 
   <!-- Resume Modal - Adjusted to match the image pop-out structure -->
-  <div *ngIf="showResumeModal" class="pop-out-view" (click)="showResumeModal = false">
+  <div *ngIf="showResumeModal" class="pop-out-view" (click)="closeResumeModal()">
     <div class="modal-content">
       <button class="download-button" (click)="downloadPdf()">Download Resume</button>
       <img class="resume-pdf" src="./assets/resume/SatnamWalia.png">
