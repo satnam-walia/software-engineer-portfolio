@@ -7,10 +7,24 @@
     </div>
     <button class="dropdown-toggle" (click)="toggleDropdown()">☰</button>
     <ul id="navbar-menu" [class.open]="isDropdownOpen">
+      <!-- Resume Item -->
+      <li>
+        <a (click)="openResume()">Resume</a>
+      </li>
+      <!-- Other Items -->
       <li *ngFor="let item of navItems">
-        <!-- Modified click event to also toggle the dropdown -->
-        <a [routerLink]="item.path" (click)="isDropdownOpen = false; scrollToSection($event, item.path)">{{ item.label }}</a>
+        <a [routerLink]="item.path" (click)="isDropdownOpen = false; scrollToSection($event, item.path)">
+          {{ item.label }}
+        </a>
       </li>
     </ul>
+  </div>
+
+  <!-- Resume Modal - Adjusted to match the image pop-out structure -->
+  <div *ngIf="showResumeModal" class="pop-out-view" (click)="showResumeModal = false">
+    <div class="modal-content">
+      <button class="download-button" (click)="downloadPdf()">Download Resume</button>
+      <img class="resume-pdf" src="./assets/resume/SatnamWalia.png">
+    </div>
   </div>
 </nav>

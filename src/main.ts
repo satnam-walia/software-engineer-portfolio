@@ -7,11 +7,12 @@ import { AppComponent } from './app/app.component';
 import { enableProdMode } from '@angular/core';
 
 import { environment } from './environment';
+import { HomeComponent } from './app/homepage/home.component';
 
 
 if (environment.production) {
   enableProdMode();
 }
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(HomeComponent).catch(err => console.error(err));
+bootstrapApplication(AppComponent, appConfig).catch((err) => console.error(err));

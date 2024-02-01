@@ -6,8 +6,7 @@ import {ExperienceComponent } from './experience/experience.component';
 import {HeaderComponent } from './header/header.component';
 import {NavigationComponent } from './navigation/navigation.component';
 import {ProjectsGridComponent } from './projects-grid/projects-grid.component';
-import { AboutComponent } from "./about/about.component";
-import { routes } from './app.routes';
+import { Meta } from '@angular/platform-browser';
 
 
 
@@ -22,16 +21,18 @@ import { routes } from './app.routes';
       HeaderComponent, 
       NavigationComponent, 
       ProjectsGridComponent, 
-      AboutComponent,
       RouterOutlet
   ]
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router,private metaTagService: Meta) {}
 
   title = 'software-engineer-portfolio';
    ngOnInit() {
     this.router.navigate([''])
+    this.metaTagService.updateTag(
+      { name: 'description', content: 'Your description content here' }
+    );
    }
 }
 
