@@ -17,6 +17,7 @@
 
 .contact-button {
   display: flex;
+  justify-content: center; 
   align-items: center;
   padding: 10px 20px;
   border: 1px solid #000;
@@ -29,7 +30,7 @@
 }
 
 .contact-button:hover {
-  background-color: #000;
+  background-color: #A9A9A9;
   color: #fff;
 }
 
@@ -59,5 +60,23 @@ h2 {
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent; /* Fallback for older versions of Safari */
-  font-size: 64px; /* Set the font size to 64px */
+  font-size: 2rem;
 }
+
+@media (max-width: 768px) {
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center; /* This will align buttons to the center */
+  }
+
+  .contact-button {
+    width: 140px; /* or you can set a specific width, e.g., 80% or 300px */
+    max-width: 300px; /* A max-width can prevent buttons from becoming too wide */
+    margin-bottom: 10px; /* Add some space between the buttons */
+  }
+
+  .contact-button:last-child {
+    margin-bottom: 0; /* Remove bottom margin from the last button */
+  }
+}
+

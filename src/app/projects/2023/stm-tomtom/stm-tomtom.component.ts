@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactComponent } from "../../../contact/contact.component";
 import { ImageSliderComponent, Slide } from '../../../imageslider/imageslider.component';
-import { javaCodeContent } from './code-content';
 import { NavigationComponent } from '../../../navigation/navigation.component';
 
 @Component({
@@ -13,7 +12,6 @@ import { NavigationComponent } from '../../../navigation/navigation.component';
     imports: [CommonModule, ContactComponent,ImageSliderComponent,NavigationComponent]
 })
 export class StmTomtomComponent implements OnInit {
-    javaCodeContent: string = javaCodeContent;
 
     ngOnInit() {
         this.scrollToTop();

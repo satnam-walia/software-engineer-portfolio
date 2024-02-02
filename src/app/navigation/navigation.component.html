@@ -7,9 +7,15 @@
     </div>
     <button class="dropdown-toggle" (click)="toggleDropdown()">☰</button>
     <ul id="navbar-menu" [class.open]="isDropdownOpen">
+       <!-- Home Button -->
+       <li *ngIf="!isHomeRoute">
+        <a routerLink= "/" (click)="isDropdownOpen = false">
+          Home
+        </a>
+      </li>
       <!-- Resume Item -->
       <li>
-        <a (click)="openResume()">Resume</a>
+        <a (click)="openResume()">View Resume</a>
       </li>
       <!-- Other Items -->
       <li *ngFor="let item of navItems">

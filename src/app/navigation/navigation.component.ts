@@ -1,6 +1,8 @@
-import { Component, Input, HostListener } from '@angular/core';
+import { Component, Input, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterModule } from '@angular/router';
+import { Router, RouterModule, Event as RouterEvent, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
+import { ChangeDetectorRef } from '@angular/core';
 
 interface NavItem {
   label: string;
@@ -14,13 +16,25 @@ interface NavItem {
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
-export class NavigationComponent {
+export class NavigationComponent implements OnInit {
   @Input() navItems: NavItem[] = [];
   isDropdownOpen: boolean = false;
   showResumeModal: boolean = false;
   pdfSrc = './assets/resume/SatnamWalia.pdf'; // Update with the path to your resume
+  isHomeRoute: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private changeDetectorRef: ChangeDetectorRef) {}
+
+  ngOnInit(): void {
+    // Check the current route manually in addition to subscribing to future changes
+    this.isHomeRoute = this.router.url === '/';
+    
+    this.router.events.pipe(
+      filter((event: RouterEvent): event is NavigationEnd => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.isHomeRoute = event.urlAfterRedirects === '/';
+    });
+  }
 
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
