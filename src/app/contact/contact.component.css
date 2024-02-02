@@ -60,7 +60,7 @@ h2 {
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent; /* Fallback for older versions of Safari */
-  font-size: 2rem;
+  font-size: 64px;
 }
 
 @media (max-width: 768px) {

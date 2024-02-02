@@ -1,0 +1,66 @@
+<app-navigation [navItems]="[
+  { path: '#my-contribution', label: 'My Contributions' },
+  { path: '#future-improvements', label: 'Future Improvements' }
+]"></app-navigation>
+
+
+
+<section class="project-section">
+    <div class="project-container">
+        <header class="project-header">
+            <h1 class="project-title">Web Portfolio</h1>
+            <p class="project-subtitle">Angular, Natural Language, Cpanel</p>
+            <p class="contribution-date">Jan 2024 - On going</p>
+        </header>
+        
+        <table class="project-table">
+            <tr>
+                <td class="project-table-cell">
+                    <h2 id ="overview" class="project-table-heading">Project Overview</h2>
+                    <p class="project-table-text">I've developed a personal web portfolio to showcase my web development skills and the experience I've gained as a software engineering student. This project serves as a platform for me to demonstrate my capabilities in web development and share the journey I've undertaken in the field of software engineering.</p>
+                </td>
+                <td class="project-table-cell">
+                    <h2 id = "business-impact" class="project-table-heading">Project Impact</h2>
+                    <p class="project-table-text"> Having a web portfolio as a software engineering student has had a significant impact on my academic and professional journey. It has provided me with a powerful tool to showcase my skills, projects, and accomplishments. This web portfolio has not only allowed me to stand out to potential employers but also served as a valuable resource for self-reflection and personal growth. It's been instrumental in demonstrating my commitment to the field and connecting with like-minded individuals in the software engineering community.</p>
+                </td>
+            </tr>
+        </table>
+
+       
+        <!-- <app-image-slider [slides]="slides"></app-image-slider>                 -->
+        <!-- <footer class="image-footer">
+            <p class="image-description">Description of the Jira Metric Tool interface.</p>
+        </footer> -->
+
+        <table class="contributions-table">
+            <tr>
+                <td class="contributions-cell">
+                    <h2 id="my-contribution" class="contributions-heading">My Contributions</h2>
+                    <p class="role-title">Brand Designer</p>
+                </td>
+                <td class="contributions-cell">
+                    <p class="contribution-description">In the development of this web portfolio, I meticulously followed best practices, including the utilization of reusable components. This deliberate approach played a pivotal role in optimizing the project's structure. By incorporating reusable components, I not only expedited the development process but also fostered a cohesive and consistent user experience across the entire portfolio. This adherence to best practices not only improved code maintainability and scalability but also laid the foundation for seamless updates and potential expansions in the future.</p>
+                </td>
+            </tr>
+        </table>
+
+        <table class="contributions-table future-improvements">
+            <tr>
+              <td class="contributions-cell">
+                <h2 id="future-improvements" class="contributions-heading">Future Improvements</h2>
+              </td>
+              <td class="contributions-cell">
+                <p class="contribution-description">In the journey ahead, I have exciting plans for further enhancing this web portfolio. Some of the key future improvements include:</p>
+                <ol>
+                    <li class="future-improvements-description"><strong>Implementing a PDF viewer:</strong> I aim to integrate a PDF viewer feature, allowing visitors to seamlessly view my resume and other documents directly on the website.</li>
+                    <li class="future-improvements-description"><strong>Debugging hydration errors:</strong> I'm committed to resolving any hydration errors to ensure the website's optimal performance and user experience.</li>
+                    <li class="future-improvements-description"><strong>Adding creative content:</strong> To make the portfolio even more engaging, I plan to incorporate creative content, including interactive elements and multimedia.</li>
+                    <li class="future-improvements-description"><strong>Magazine-inspired design:</strong> I aspire to transform the website's aesthetics, giving it a unique and captivating magazine-style look. This redesign will elevate the visual appeal and user engagement of the portfolio.</li>
+                    <li class="future-improvements-description"><strong>Enhancing resolution across all browsers:</strong> I will work on improving the website's compatibility and resolution across various web browsers to ensure a consistent and high-quality user experience.</li>
+                </ol>
+              </td>
+            </tr>
+          </table>
+    </div>
+    <app-contact></app-contact>
+</section>

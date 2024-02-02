@@ -14,5 +14,5 @@ import { ContactComponent } from "../contact/contact.component";
     imports: [CommonModule, ProjectsGridComponent, NavigationComponent, HeaderComponent,ExperienceComponent, ContactComponent]
 })
 export class HomeComponent {
-
+    
 }
